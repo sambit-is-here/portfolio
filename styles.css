@@ -6,8 +6,9 @@
 }
 
 body {
-    background: #181818;
-    color: #e1e1e1;
+    background: url('AlbedoBase_XL_need_the_same_thing_and_just_change_the_name_to_1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
@@ -17,12 +18,11 @@ body {
 .header {
     position: relative;
     text-align: center;
-    background: url('AlbedoBase_XL_need_the_same_thing_and_just_change_the_name_to_1.jpg') center/cover no-repeat;
-    background-attachment: fixed;
+    background: rgba(255, 255, 255, 0.7); /* Lighter overlay */
     padding: 100px 0;
-    color: white;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+    color: #2c3e50;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.4);
     animation: fadeInHeader 3s ease-in-out;
 }
 
@@ -32,22 +32,24 @@ body {
     letter-spacing: 5px;
     text-transform: uppercase;
     animation: textSlide 2s ease-in-out;
+    color: #34495e;
 }
 
 .header p {
     font-size: 1.5rem;
     margin-top: 0;
     animation: textSlide 2s ease-in-out;
+    color: #7f8c8d;
 }
 
 /* Introduction Section */
 .intro {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: rgba(255, 255, 255, 0.7); /* Lighter overlay */
     padding: 60px 40px;
     margin-top: 60px;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+    color: #34495e;
     position: relative;
     animation: fadeInText 2s ease-in-out;
 }
@@ -61,12 +63,12 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .intro-text h2 {
     font-size: 3rem;
-    color: #fff;
+    color: #34495e;
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -75,16 +77,17 @@ body {
 .intro-text h4 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #7f8c8d;
 }
 
 .intro-text p {
     font-size: 1.3rem;
     line-height: 1.6;
-    color: #ecf0f1;
+    color: #2c3e50;
 }
 
 .intro-text a {
-    color: #ecf0f1;
+    color: #3498db;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -96,40 +99,40 @@ body {
 /* Work & Organization Experience Section */
 .work-experience.section {
     margin-top: 80px;
-    background: linear-gradient(135deg, #f39c12, #8e44ad);
+    background: rgba(255, 255, 255, 0.8); /* Lighter overlay */
     padding: 60px 40px;
     border-radius: 25px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 50px rgba(255, 255, 255, 0.2);
     animation: fadeInText 2s ease-in-out;
 }
 
 .work-experience .experience-card {
-    background-color: #2c3e50;
+    background-color: #ecf0f1;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     margin-top: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-experience .experience-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .work-experience h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: #34495e;
     text-transform: uppercase;
     letter-spacing: 3px;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #34495e;
     padding-bottom: 15px;
 }
 
 .work-experience p {
     font-size: 1.1rem;
-    color: #ecf0f1;
+    color: #2c3e50;
     line-height: 1.6;
 }
 
@@ -152,9 +155,9 @@ body {
 }
 
 .skill-card, .interest-card {
-    background-color: #34495e;
+    background-color: #ecf0f1;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     padding: 20px;
     text-align: center;
     cursor: pointer;
@@ -164,7 +167,7 @@ body {
 
 .skill-card:hover, .interest-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     background-color: #f39c12;
 }
 
@@ -176,7 +179,7 @@ body {
 
 .skill-name, .interest-name {
     font-size: 1.2rem;
-    color: #fff;
+    color: #34495e;
     margin-bottom: 15px;
 }
 
