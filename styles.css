@@ -1,63 +1,211 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-.header {
-    background: #f4f4f4;
-    text-align: center;
-    padding: 20px;
-}
-.header h1 {
-    margin: 0;
-    font-size: 48px;
-}
-.header p {
-    margin: 5px 0;
+
+body {
+    background: #181818;
+    color: #e1e1e1;
     font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-.container {
-    margin: 20px auto;
-    width: 80%;
+
+/* Header */
+.header {
+    position: relative;
+    text-align: center;
+    background: url('AlbedoBase_XL_need_the_same_thing_and_just_change_the_name_to_1.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 100px 0;
+    color: white;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+    animation: fadeInHeader 3s ease-in-out;
 }
+
+.header h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: textSlide 2s ease-in-out;
+}
+
+.header p {
+    font-size: 1.5rem;
+    margin-top: 0;
+    animation: textSlide 2s ease-in-out;
+}
+
+/* Introduction Section */
 .intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    padding: 60px 40px;
+    margin-top: 60px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: relative;
+    animation: fadeInText 2s ease-in-out;
 }
-.profile-photo {
-    width: 150px;
-    height: 150px;
+
+.intro .profile-photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro .profile-photo img {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    overflow: hidden;
-    object-fit: cover;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
-.profile-photo img {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.intro-text h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
-.intro-text {
-    flex-grow: 1;
-    margin-left: 20px;
+
+.intro-text h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
-.skills-interests {
-    margin-top: 20px;
+
+.intro-text p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ecf0f1;
 }
-.skills, .interests {
-    margin: 10px 0;
+
+.intro-text a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-.skills div, .interests div {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 15px;
-    background: #f0c040;
-    border-radius: 20px;
+
+.intro-text a:hover {
+    color: #f39c12;
 }
-.work-experience {
-    margin-top: 40px;
+
+/* Work & Organization Experience Section */
+.work-experience.section {
+    margin-top: 80px;
+    background: linear-gradient(135deg, #f39c12, #8e44ad);
+    padding: 60px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    animation: fadeInText 2s ease-in-out;
 }
-.section {
+
+.work-experience .experience-card {
+    background-color: #2c3e50;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-experience .experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.work-experience h3 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 15px;
+}
+
+.work-experience p {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    line-height: 1.6;
+}
+
+/* Skills & Interests Section */
+.skills-interests {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.skills, .interests {
+    width: 48%;
+}
+
+.skills-list, .interests-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.skill-card, .interest-card {
+    background-color: #34495e;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.skill-card:hover, .interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background-color: #f39c12;
+}
+
+.skill-card img, .interest-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.skill-name, .interest-name {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textSlide {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
